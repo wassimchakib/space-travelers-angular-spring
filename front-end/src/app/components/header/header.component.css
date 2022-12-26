@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  height: 72px;
+}
+
+.nav__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__title h1 {
+  margin-left: 10px;
+  line-height: 1.1;
+}
+
+.nav__logo {
+  height: 90%;
+  width: auto;
+}
+
+.nav__items {
+  display: flex;
+}
+
+.nav__items li {
+  padding: 0 10px;
+}
+
+.nav__items li:last-child {
+  border-left: 1px solid black;
+}
+
+.nav__items a {
+  color: #017bff;
+  text-decoration: none;
+}
+
+.nav__items .active {
+  text-decoration: underline;
+}
