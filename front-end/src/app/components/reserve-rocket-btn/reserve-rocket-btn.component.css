@@ -1,0 +1,26 @@
+.rocket__reserve {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.rocket__reserve:hover {
+  background-color: #65aefc;
+}
+
+.rocket__cancel {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  color: #d5d3d3;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.rocket__cancel:hover {
+  background-color: #d5d3d3;
+  color: #fff;
+}

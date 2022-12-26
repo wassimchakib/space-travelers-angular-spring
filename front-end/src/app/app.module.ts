@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { RocketsComponent } from './components/rockets/rockets.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MissionsComponent } from './components/missions/missions.component';
+import { RocketCardComponent } from './components/rocket-card/rocket-card.component';
+import { ReserveRocketBtnComponent } from './components/reserve-rocket-btn/reserve-rocket-btn.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MissionsComponent } from './components/missions/missions.component';
     HeaderComponent,
     RocketsComponent,
     ProfileComponent,
-    MissionsComponent
+    MissionsComponent,
+    RocketCardComponent,
+    ReserveRocketBtnComponent
   ],
   imports: [
     BrowserModule,
