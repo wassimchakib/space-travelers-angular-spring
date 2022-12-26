@@ -1,0 +1,11 @@
+
+<div class="rocket__card" *ngFor="let rocket of rockets">
+  <img class="rocket__image" src={{rocket.flickr_images[0]}} alt={{rocket.rocket_name}} />
+  <div class="rocket__content">
+    <h2>{{rocket.rocket_name}}</h2>
+    <p>
+      {{rocket.description}}
+    </p>
+    <app-reserve-rocket-btn [reserved]="rocket?.['reserved']" [id]="rocket.rocket_id" (btnEvent)="displayId($event)"></app-reserve-rocket-btn>
+  </div>
+</div>
