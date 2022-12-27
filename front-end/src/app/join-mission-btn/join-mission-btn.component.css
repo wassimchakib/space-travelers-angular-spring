@@ -1,0 +1,25 @@
+.mission__join {
+  white-space: nowrap;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.mission__join:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.mission__leave {
+  border: 1px solid red;
+  color: red;
+  white-space: nowrap;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.mission__leave:hover {
+  background-color: red;
+  color: white;
+}

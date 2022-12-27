@@ -10,6 +10,7 @@ import { MissionsComponent } from './components/missions/missions.component';
 import { RocketCardComponent } from './components/rocket-card/rocket-card.component';
 import { ReserveRocketBtnComponent } from './components/reserve-rocket-btn/reserve-rocket-btn.component';
 import { MissionCardComponent } from './components/mission-card/mission-card.component';
+import { JoinMissionBtnComponent } from './join-mission-btn/join-mission-btn.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MissionCardComponent } from './components/mission-card/mission-card.com
     MissionsComponent,
     RocketCardComponent,
     ReserveRocketBtnComponent,
-    MissionCardComponent
+    MissionCardComponent,
+    JoinMissionBtnComponent
   ],
   imports: [
     BrowserModule,
