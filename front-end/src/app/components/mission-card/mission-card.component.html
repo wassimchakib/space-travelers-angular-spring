@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <td>Missions</td>
+      <td>Description</td>
+      <td>Status</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mission of missions">
+      <td class="mission__title">{{mission.name}}</td>
+      <td>
+       {{mission.description}}
+      </td>
+      <td class="mission__member"><span [ngClass]="{'not__member' : (!mission.member),'active__member':(mission.member)}">{{mission.member ? 'Active Member' : 'Not A member'}}</span></td>
+      <!-- Change this button to a component -->
+      <td><button>Join Mission </button></td>
+    </tr>
+  </tbody>
+</table>
