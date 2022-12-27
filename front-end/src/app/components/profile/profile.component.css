@@ -1,0 +1,26 @@
+.profile {
+  display: flex;
+  column-gap: 20px;
+}
+
+.profile__title {
+  font-weight: 500;
+}
+
+.profile__missions, 
+.profile__rockets {
+  width: 50%;
+}
+
+ul {
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+}
+
+li {
+  padding: 10px;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid #e8e8e8;
+}

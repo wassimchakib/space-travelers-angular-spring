@@ -18,7 +18,6 @@ export class RocketCardComponent implements OnInit {
 
   displayId(id:string|undefined){
     this.rockets = this.rockets?.map(rocket => rocket.rocket_id === id ? {...rocket, reserved: !rocket?.['reserved']} : rocket);
-    console.log(this.rockets?.filter(rocket => rocket.rocket_id !== id));
   }
 
 }
