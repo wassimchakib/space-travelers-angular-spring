@@ -2,7 +2,10 @@
   <section class="profile__missions">
     <h2 class="profile__title">My Missions</h2>
     <ul>
-      <li>No Missions Joined</li>
+      <li *ngFor="let rocket of rockets">
+        <app-reserve-rocket-btn [reserved]="rocket?.['reserved']" [id]="rocket.rocket_id" (btnEvent)="displayId($event)"></app-reserve-rocket-btn>
+      </li>
+      <li *ngIf="rockets?.length === 0">No Missions Joined</li>
     </ul>
   </section>
   <section class="profile__rockets">
@@ -11,5 +14,4 @@
       <li>No Rockets reserved</li>
     </ul>
   </section>
-
 </div>

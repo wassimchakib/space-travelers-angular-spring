@@ -11,6 +11,8 @@ import { RocketCardComponent } from './components/rocket-card/rocket-card.compon
 import { ReserveRocketBtnComponent } from './components/reserve-rocket-btn/reserve-rocket-btn.component';
 import { MissionCardComponent } from './components/mission-card/mission-card.component';
 import { JoinMissionBtnComponent } from './join-mission-btn/join-mission-btn.component';
+import { StoreModule } from '@ngrx/store';
+import { rocketReducer } from './rocket.reducer';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { JoinMissionBtnComponent } from './join-mission-btn/join-mission-btn.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({rockets: rocketReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
