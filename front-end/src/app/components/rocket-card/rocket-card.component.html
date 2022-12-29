@@ -4,6 +4,7 @@
   <div class="rocket__content">
     <h2>{{rocket.rocket_name}}</h2>
     <p>
+      <span *ngIf="rocket['reserved']" class="rocket__reserved">reserved</span>
       {{rocket.description}}
     </p>
     <app-reserve-rocket-btn [reserved]="rocket?.['reserved']" [id]="rocket.rocket_id" (btnEvent)="displayId($event)"></app-reserve-rocket-btn>

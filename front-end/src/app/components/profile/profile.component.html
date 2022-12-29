@@ -2,7 +2,14 @@
   <section class="profile__missions">
     <h2 class="profile__title">My Missions</h2>
     <ul>
-      <li>No Missions Joined</li>
+      <li *ngFor="let mission of missions">
+        <div>
+          {{mission['mission_name']}} 
+          <a href={{mission.wikipedia}} target="_blank"><fa-icon [icon]="faCircleQuestion"></fa-icon></a>
+        </div>
+        <app-join-mission-btn [member]="mission.member" [id]="mission['mission_id']" (joinEmit)="toggleMember($event)"></app-join-mission-btn>
+      </li>
+      <li *ngIf="missions?.length === 0">No Missions Joined</li>
     </ul>
   </section>
   <section class="profile__rockets">

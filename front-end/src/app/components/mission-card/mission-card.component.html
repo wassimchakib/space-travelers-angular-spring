@@ -9,13 +9,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let mission of missions">
-      <td class="mission__title">{{mission.name}}</td>
+      <td class="mission__title">{{mission['mission_name']}}</td>
       <td>
        {{mission.description}}
       </td>
       <td class="mission__member"><span [ngClass]="{'not__member' : (!mission.member),'active__member':(mission.member)}">{{mission.member ? 'Active Member' : 'Not A member'}}</span></td>
-      <!-- Change this button to a component -->
-      <td><app-join-mission-btn [member]="mission.member" [id]="mission.id" (joinEmit)="toggleMember($event)"></app-join-mission-btn></td>
+      <td><app-join-mission-btn [member]="mission.member" [id]="mission['mission_id']" (joinEmit)="toggleMember($event)"></app-join-mission-btn></td>
     </tr>
   </tbody>
 </table>
