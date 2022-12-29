@@ -1,5 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { Rocket } from 'src/app/models/Rocket';
+
+interface AppState {
+  rockets: Rocket[],
+}
 
 @Component({
   selector: 'app-rocket-card',
@@ -7,18 +13,21 @@ import { Rocket } from 'src/app/models/Rocket';
   styleUrls: ['./rocket-card.component.css']
 })
 export class RocketCardComponent implements OnInit {
-  @Input() rockets:Rocket[];
+  rockets:Observable<Rocket[]>;
+  RESERVE_ROCKET = 'spacetravelers/rockets/reserve_rocket';
 
-  constructor() { 
-    this.rockets = [];
+  constructor(private store: Store<AppState>) { 
+    this.rockets = this.store.select('rockets');
   }
 
   ngOnInit(): void {
   }
 
   displayId(id:string|undefined){
-    this.rockets = this.rockets?.map(rocket => rocket.rocket_id === id ? {...rocket, reserved: !rocket?.['reserved']} : rocket);
-    console.log(this.rockets?.filter(rocket => rocket.rocket_id !== id));
+    this.store.dispatch({
+      type: this.RESERVE_ROCKET,
+      payload: id,
+    });
   }
 
 }

@@ -1,1 +1,22 @@
-<p>profile works!</p>
+<div class="profile">
+  <section class="profile__missions">
+    <h2 class="profile__title">My Missions</h2>
+    <ul>
+      <li>No Missions Joined</li>
+    </ul>
+  </section>
+  <section class="profile__rockets">
+    <h2 class="profile__title">My Rockets</h2>
+    <ul>
+      <li *ngFor="let rocket of rockets">
+        <div>
+          {{rocket['rocket_name']}} 
+          <a href={{rocket.wikipedia}} target="_blank"><fa-icon [icon]="faCircleQuestion"></fa-icon></a>
+        </div>
+        <app-reserve-rocket-btn [reserved]="rocket?.['reserved']" [id]="rocket.rocket_id" (btnEvent)="displayId($event)"></app-reserve-rocket-btn>
+      </li>
+      <li *ngIf="rockets?.length === 0">No Missions Joined</li>
+    </ul>
+  </section>
+
+</div>

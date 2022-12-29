@@ -1,5 +1,5 @@
 
-<div class="rocket__card" *ngFor="let rocket of rockets">
+<div class="rocket__card" *ngFor="let rocket of rockets | async">
   <img class="rocket__image" src={{rocket.flickr_images[0]}} alt={{rocket.rocket_name}} />
   <div class="rocket__content">
     <h2>{{rocket.rocket_name}}</h2>

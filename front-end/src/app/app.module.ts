@@ -10,7 +10,10 @@ import { MissionsComponent } from './components/missions/missions.component';
 import { RocketCardComponent } from './components/rocket-card/rocket-card.component';
 import { ReserveRocketBtnComponent } from './components/reserve-rocket-btn/reserve-rocket-btn.component';
 import { MissionCardComponent } from './components/mission-card/mission-card.component';
-import { JoinMissionBtnComponent } from './join-mission-btn/join-mission-btn.component';
+import { JoinMissionBtnComponent } from './components/join-mission-btn/join-mission-btn.component';
+import { StoreModule } from '@ngrx/store';
+import { rocketReducer } from './rocket.reducer';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { JoinMissionBtnComponent } from './join-mission-btn/join-mission-btn.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    StoreModule.forRoot({rockets: rocketReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
