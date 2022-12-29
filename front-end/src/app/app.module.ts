@@ -14,6 +14,7 @@ import { JoinMissionBtnComponent } from './components/join-mission-btn/join-miss
 import { StoreModule } from '@ngrx/store';
 import { rocketReducer } from './rocket.reducer';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { missionReducer } from './mission.reducer';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    StoreModule.forRoot({rockets: rocketReducer})
+    StoreModule.forRoot({rockets: rocketReducer, missions: missionReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
