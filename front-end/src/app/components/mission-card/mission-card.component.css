@@ -1,14 +1,17 @@
-table, tr, td {
+table,
+tr,
+td {
   border: 1px solid #e8e8e8;
   border-collapse: collapse;
   padding: 10px;
 }
 
-thead, .mission__title {
+thead,
+.mission__title {
   font-weight: bold;
 }
 
-tbody tr:nth-child(odd){
+tbody tr:nth-child(odd) {
   background-color: #f6f6f6;
 }
 

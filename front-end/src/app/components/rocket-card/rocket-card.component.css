@@ -5,9 +5,9 @@
   background-color: #fffdfd;
   padding: 16px;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px 0px rgba(232, 232, 232, 1);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(232, 232, 232, 1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(232, 232, 232, 1);
+  box-shadow: 10px 10px 5px 0 rgba(232, 232, 232, 1);
+  -webkit-box-shadow: 10px 10px 5px 0 rgba(232, 232, 232, 1);
+  -moz-box-shadow: 10px 10px 5px 0 rgba(232, 232, 232, 1);
 }
 
 .rocket__image {
